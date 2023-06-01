@@ -1,6 +1,5 @@
 mod data_types;
 
-use core::num;
 use std::{io::{self, Write}, collections::VecDeque};
 
 use rand::seq::SliceRandom;
@@ -590,7 +589,7 @@ fn run() {
     while decision_is_not_valid {
         print!("Welcome to Exchange! How many players are there? ");
         io::stdout().flush().unwrap();
-        
+
         num_players.clear();
         io::stdin().read_line(&mut num_players).unwrap();
         let num_players: u32 = match num_players.trim().parse() {
